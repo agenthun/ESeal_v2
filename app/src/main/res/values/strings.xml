@@ -3,4 +3,5 @@
     <string name="action_settings">设置</string>
     <string name="unknown_device">未知设备</string>
     <string name="unknown_characteristic">未知特征值</string>
+    <string name="text_eseal">蓝牙锁 v1.0</string>
 </resources>

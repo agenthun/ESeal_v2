@@ -4,30 +4,37 @@ import com.agenthun.material.animation.MenuAndBackButton;
 import com.special.ResideMenu.ResideMenu;
 import com.special.ResideMenu.ResideMenuItem;
 
+import butterknife.ButterKnife;
+import butterknife.InjectView;
 import in.srain.cube.mints.base.MintsBaseActivity;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.ActionBarDrawerToggle;
+import android.support.v7.widget.Toolbar;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Toast;
 
 public class MainActivity extends MintsBaseActivity implements OnClickListener {
-    private ActionBarDrawerToggle actionBarDrawerToggle;
     private MenuAndBackButton menuAndBackButton;
     private ResideMenu resideMenu;
     private ResideMenuItem itemSearch;
     private ResideMenuItem itemHistory;
     private ResideMenuItem itemSetting;
     private ResideMenuItem itemAbout;
+/*    @InjectView(R.id.toolbar)
+    Toolbar toolbar;
+    private ActionBarDrawerToggle actionBarDrawerToggle;*/
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+//        ButterKnife.inject(this);
+
         setUpMenu();
         menuAndBackButton = (MenuAndBackButton) findViewById(R.id.menu_btn);
         menuAndBackButton.setOnClickListener(new View.OnClickListener() {
